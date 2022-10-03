@@ -11,7 +11,7 @@ const Nav = () => {
                 {navlinks.map(link =>
                     (<li key={uuid()} className='text-black'>{link.title}</li>))}</ul>
             <HiMenu className='w-8 h-8 md:hidden' />
-            <Button text='Sign in' bg='bg-lightBlue' textColor='text-blue' classes='hidden md:block' />
+            <Button text='Sign in' bg='bg-lightBlue' textColor='text-blue' classes='hidden md:block font-semibold' />
         </nav>
     )
 }
