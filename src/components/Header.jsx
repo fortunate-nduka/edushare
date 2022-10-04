@@ -1,12 +1,11 @@
-import { Fragment } from "react"
-import { Nav, Intro } from "./"
+import { Nav, Intro } from './';
 
 const Header = () => {
-    return (
-        <Fragment>
-            <Nav />
-            <Intro />
-        </Fragment>
-    )
-}
-export default Header
+  return (
+    <header>
+      <Nav />
+      <Intro />
+    </header>
+  );
+};
+export default Header;
