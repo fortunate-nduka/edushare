@@ -1,10 +1,11 @@
 import { v4 as uuid } from 'uuid';
+import {BsFillCartDashFill} from 'react-icons/bs'
 import { coursesData } from '../data';
 import Button from './Button';
 
 const Courses = () => {
   return (
-    <section className='py-14 md:py-16'>
+    <section className='py-14 md:py-16 flex flex-col'>
       <div className='flex items-center justify-between mb-12'>
         <h2 className='font-bold text-3xl text-headingText sm:w-[70%] md:w-[60%] lg:w-[40%]'>
           How our online public school works
@@ -38,12 +39,20 @@ const Courses = () => {
                   : 'bg-blue text-white'
               }`}
             >
-              <img src={cd.icon3} alt='cart' />
+              <BsFillCartDashFill
+                className={`${
+                  cd.btnType === 'outlineBtn' ? 'text-blue' : 'text-white'
+                }`}
+              />
               <span>Add to cart</span>
             </button>
           </div>
         ))}
       </div>
+      <Button
+        text='View all courses'
+        classes='border-2 border-blue block md:hidden whitespace-nowrap text-blue self-center mt-16'
+      />
     </section>
   );
 };
