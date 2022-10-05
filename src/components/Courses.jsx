@@ -1,0 +1,50 @@
+import { v4 as uuid } from 'uuid';
+import { coursesData } from '../data';
+import Button from './Button';
+
+const Courses = () => {
+  return (
+    <section className='py-14 md:py-16'>
+      <div className='flex items-center justify-between mb-12'>
+        <h2 className='font-bold text-4xl text-headingText sm:w-[70%] md:w-[60%] lg:w-[40%]'>
+          How our online public school works
+        </h2>
+        <Button
+          text='View all courses'
+          classes='border-2 border-blue hidden md:block whitespace-nowrap text-blue'
+        />
+      </div>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-16'>
+        {coursesData.map((cd) => (
+          <div key={uuid()} className=''>
+            <img src={cd.imgUrl} alt='course' className='w-full' />
+            <h4 className='font-semibold text-2xl text-headingText mt-4 mb-6'>
+              {cd.heading}
+            </h4>
+            <div className='flex items-center gap-12'>
+              <div className='flex items-center gap-2'>
+                <img src={cd.icon1} alt='2 persons' />
+                <span>{cd.icon1Text}</span>
+              </div>
+              <div className='flex items-center gap-2'>
+                <img src={cd.icon2} alt='clock' />
+                <span>{cd.icon2Text}</span>
+              </div>
+            </div>
+            <button
+              className={`mt-5 flex items-center justify-center gap-3 w-full px-6 py-3 rounded-md outline-none ${
+                cd.btnType === 'outlineBtn'
+                  ? 'border border-blue bg-transparent text-blue'
+                  : 'bg-blue text-white'
+              }`}
+            >
+              <img src={cd.icon3} alt='cart' />
+              <span>Add to cart</span>
+            </button>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+export default Courses;

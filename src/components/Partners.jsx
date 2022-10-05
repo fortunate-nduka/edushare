@@ -3,7 +3,7 @@ import { partnersLogo } from '../data';
 
 const Partners = () => {
   return (
-    <section className='py-16 md:py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-items-center sm:justify-between gap-y-10'>
+    <section className='py-14 md:py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-items-center sm:justify-between gap-y-10'>
       <div className='flex flex-col gap-3 w-[60%] sm:w-[90%] lg:w-full text-center lg:text-left'>
         <h2 className='font-bold text-4xl xl:text-5xl text-headingText'>
           400+

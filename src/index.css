@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply font-poppins text-paraText tracking-wider w-full max-w-screen-xl mx-auto px-6 sm:px-12;
+    @apply font-poppins text-paraText tracking-wider w-full max-w-screen-xl mx-auto px-6 sm:px-12 overflow-x-hidden;
   }
 }

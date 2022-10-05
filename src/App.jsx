@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Header, How, Partners } from './components';
+import { Courses, Header, How, Partners } from './components';
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <Header />
       <Partners />
       <How />
+      <Courses />
     </Fragment>
   );
 }
