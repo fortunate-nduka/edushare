@@ -6,7 +6,7 @@ const Courses = () => {
   return (
     <section className='py-14 md:py-16'>
       <div className='flex items-center justify-between mb-12'>
-        <h2 className='font-bold text-4xl text-headingText sm:w-[70%] md:w-[60%] lg:w-[40%]'>
+        <h2 className='font-bold text-3xl text-headingText sm:w-[70%] md:w-[60%] lg:w-[40%]'>
           How our online public school works
         </h2>
         <Button
@@ -18,7 +18,7 @@ const Courses = () => {
         {coursesData.map((cd) => (
           <div key={uuid()} className=''>
             <img src={cd.imgUrl} alt='course' className='w-full' />
-            <h4 className='font-semibold text-2xl text-headingText mt-4 mb-6'>
+            <h4 className='font-medium text-xl text-headingText mt-4 mb-6'>
               {cd.heading}
             </h4>
             <div className='flex items-center gap-12'>
